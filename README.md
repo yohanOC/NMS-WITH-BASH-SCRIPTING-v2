@@ -6,6 +6,8 @@ This is simple scripting for NMS using bash scrip. requirement for running this 
 2. curl package
 3. crontab package
 4. boot telegram
+5. create keyword file
+6. create devices list
 
 step 1 (install curl packate)
 1. sudo apt-get update #for ubuntu system
@@ -27,3 +29,8 @@ step 3 (create boot telegram)
 https://core.telegram.org/bots/api
 https://core.telegram.org/bots
 
+step 4 
+1. create keywoard list for example "flap" ect
+
+step 5
+1. create devices list, the conten of devices list must be similiar with file on syslog server where your save syslog message from your devices
