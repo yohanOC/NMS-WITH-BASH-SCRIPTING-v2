@@ -87,4 +87,4 @@ while IFS= read -r list; do #loop for cheching devices list
 		echo "$list ok" #false condition
 
 	fi
-done </home/list #end loops
+done </home/list_devices #end loops
