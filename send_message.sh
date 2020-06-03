@@ -27,7 +27,6 @@ func_check() {
 	keywoards=$(cat /home/keyword)
 	keys=$keywoards
 	myvar="$(tail -2 /var/log/$1.log | grep -i "$key1" | grep -i -F "${keys}" -c)"
-	#myvar="$(tail -2 /var/log/net/$1.log | grep -i "$key1" | grep -i -E "$2" -c)"
 	echo "$myvar"
 }
 
