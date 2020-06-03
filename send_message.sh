@@ -69,6 +69,7 @@ func_send_message() {
 	 url="https://api.telegram.org/xxxxxxxxxx/sendMessage" #xxxxxxxx your bot id
 	 message="$(func_find_root_cause $1)"
 	 curl -s -X POST "$url" -d chat_id="$chat_id" -d text="$message"
+}
 
 key1="$(func_key)"
 
