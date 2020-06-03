@@ -1,5 +1,5 @@
 # NMS-WITH-BASH-SCRIPTING-v2
-Script for send message to telegram when syslog find anomaly message
+Script using for send message to telegram when syslog find anomaly message
 
 This is simple scripting for NMS using bash scrip. requirement for running this script as below
 1. linux system
