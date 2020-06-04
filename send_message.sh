@@ -9,6 +9,7 @@ keyword4="CPUFALLINGTHRESHOLD"
 
 #function using for variable
 func_key() {
+	month=$(date | cut -d' ' -f2-4)
 	now=$(date --date="5 minute ago")
 	mykey=($now)
 	IFS=":"
@@ -17,8 +18,8 @@ func_key() {
 	min2=$"${minute[1]}"
 	newminute=${min2::1}
 	finalminute=${newminute[0]}
-	key1=$"${mykey[2]} ${mykey[5]}"
-	echo "$key1 $min1:$finalminute"
+	key1="$month $min1:$finalminute"
+	echo "$key1"
 }
 
 #function counting if there is happen any anomaly as definition in above
