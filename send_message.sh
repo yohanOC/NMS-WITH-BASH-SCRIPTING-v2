@@ -9,8 +9,8 @@ keyword4="CPUFALLINGTHRESHOLD"
 
 #function using for variable
 func_key() {
-	month=$(date | cut -d' ' -f2-4)
 	now=$(date --date="5 minute ago")
+	month=$(echo "$now" | cut -d' ' -f2-4)
 	mykey=($now)
 	IFS=":"
 	read -ra minute <<< "${mykey[3]}"
