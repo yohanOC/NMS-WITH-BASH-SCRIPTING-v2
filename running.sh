@@ -2,6 +2,6 @@
 #!/bin/bash
 while true
 do
- /home/Log_report/script/notif/notif.s
+ /home/send_message.sh
  sleep 1
 done
