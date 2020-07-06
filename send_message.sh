@@ -10,18 +10,20 @@ keyword4="CPUFALLINGTHRESHOLD"
 #function using for variable
 func_key() {
 	#now=$(date --date="5 minute ago") if you wanna to uddate every 5 minute
-	now=$(date) #update every second
-	month=$(echo "$now" | cut -d' ' -f2-3)
-	mykey=($now)
-	IFS=":"
-	read -ra minute <<< "${mykey[3]}"
-	min1=$"${minute[0]}"
-	min2=$"${minute[1]}"
-	min3=$"${minute[2]}"
-	newminute=${min2::1}
-	finalminute=${newminute[0]}
-	key1="$month $min1:$min2:$finalminute"
-	echo "$key1"
+	#now=$(date) #update every second
+	#month=$(echo "$now" | cut -d' ' -f2-3)
+	#mykey=($now)
+	#IFS=":"
+	#read -ra minute <<< "${mykey[3]}"
+	#min1=$"${minute[0]}"
+	#min2=$"${minute[1]}"
+	#min3=$"${minute[2]}"
+	#newminute=${min2::1}
+	#finalminute=${newminute[0]}
+	#key1="$month $min1:$min2:$finalminute"
+	#echo "$key1"
+	now=$(date | cut -c 5-18) #other solutions
+	echo "$now"
 }
 
 #function counting if there is happen any anomaly as definition in above
