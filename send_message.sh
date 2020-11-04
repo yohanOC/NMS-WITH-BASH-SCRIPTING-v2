@@ -31,7 +31,7 @@ func_check() {
 
 	keywoards=$(cat /home/keyword)
 	keys=$keywoards
-	myvar="$(tail -2 /var/log/$1.log | grep -i "$key1" | grep -i -F "${keys}" -c)"
+	myvar="$(tail -2 /var/log/$1.log | grep -i "$now" | grep -i -F "${keys}" -c)"
 	echo "$myvar"
 }
 
@@ -40,7 +40,7 @@ func_message() {
 
 	keywoards=$(cat /home/keyword)
 	keys=$keywoards
-	myvari="$(tail -2 /var/log/$1.log | grep -i "$key1" | grep -i -E "$keys")"
+	myvari="$(tail -2 /var/log/$1.log | grep -i "$now" | grep -i -E "$keys")"
 	echo "$myvari"
 }
 
