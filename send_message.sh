@@ -29,7 +29,7 @@ func_key() {
 #function counting if there is happen any anomaly as definition in above
 func_check() {
 	
-	time="$(func_key)
+	time="$(func_key)"
 	keywoards=$(cat /home/keyword)
 	keys=$keywoards
 	myvar="$(tail -2 /var/log/$1.log | grep -i "$time" | grep -i -F "${keys}" -c)"
@@ -39,7 +39,7 @@ func_check() {
 #function using for custom message want to send in telegram or other
 func_message() {
 	
-	time="$(func_key)
+	time="$(func_key)"
 	keywoards=$(cat /home/keyword)
 	keys=$keywoards
 	myvari="$(tail -2 /var/log/$1.log | grep -i "$time" | grep -i -E "$keys")"
